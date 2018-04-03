@@ -43,7 +43,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`td_unidade_federativa` (
   `idt_estado` INT NOT NULL AUTO_INCREMENT,
   `nme_estado` VARCHAR(50) NOT NULL,
   `sgl_estado` VARCHAR(30) NOT NULL,
-  `cod_regiao` INT NOT NULL,
   PRIMARY KEY (`idt_estado`))
 ENGINE = InnoDB;
 

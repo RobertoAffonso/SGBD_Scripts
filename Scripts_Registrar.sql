@@ -1,26 +1,48 @@
 /*Inserts*/
 
 /**********************tb_avaliacao***********************/
-INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (5, 'In dignissim venenatis dolor eleifend.');
--- INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (4.5, 'In dignissim venenatis dolor eleifend.');
-INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (4, 'In dignissim venenatis dolor eleifend.');
--- INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (3.5, 'In dignissim venenatis dolor eleifend.');
-INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (3, 'In dignissim venenatis dolor eleifend.');
--- INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (2.5, 'In dignissim venenatis dolor eleifend.');
-INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (2, 'In dignissim venenatis dolor eleifend.');
--- INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (1.5, 'In dignissim venenatis dolor eleifend.');
-INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (1, 'In dignissim venenatis dolor eleifend.');
--- INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (0.5, 'In dignissim venenatis dolor eleifend.');
-INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao) VALUES (0, 'In dignissim venenatis dolor eleifend.');
---
+INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao, cod_usuario, cod reserva)
+ VALUES (5, 'In dignissim venenatis dolor eleifend.', 1, 1);
+
+INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao, cod_usuario, cod_reserva) 
+ VALUES (4, 'In dignissim venenatis dolor eleifend.', 2, 2);
+
+INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao, cod_usuario, cod reserva) 
+ VALUES (3, 'In dignissim venenatis dolor eleifend.', 3, 3);
+
+INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao, cod_usuario, cod reserva)
+ VALUES (1, 'In dignissim venenatis dolor eleifend.', 5, 5);
+
+INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao, cod_usuario, cod reserva)
+ VALUES (0, 'In dignissim venenatis dolor eleifend.'6, 6);
+-- 
 --
 --
 /**********************tb_anuncio***********************/
-INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, desc_anuncio) VALUES ("Quarto Standard, Hotel Confort Suites", "2017-11-21", "Lorem ipsum dolor sit amet, consectetur adipiscing.");
-INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, desc_anuncio) VALUES ("Espaço para barraca, Campus Party Brasilia 2018", "2017-10-01", "Duis molestie sem dui, nec porttitor ipsum aliquam lobortis");
-INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, desc_anuncio) VALUES ("Espaço para barraca, Porão do Rock 2017","2017-11-01", "Ut enim mi, mollis non imperdiet ut, iaculis ut risus");
-INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, desc_anuncio) VALUES ("Quarto Presidencial, Grand Bittar", "2017-01-20", "Sed quis nunc ac ligula auctor sagittis a quis mauris");
-INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, desc_anuncio) VALUES ("Apartamento para Locação, 308 Norte bloco C", "2017-08-25", "Maecenas et gravida nulla, id sagittis purus");
+INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, dsc_anuncio, cod_usuario, cod_imovel)
+ VALUES ("Quarto Standard, Hotel Confort Suites", "2017-11-21",
+  		"Lorem ipsum dolor sit amet, consectetur adipiscing.",
+  		 1, 1);
+
+INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, dsc_anuncio, cod_usuario, cod_imovel)
+ VALUES ("Espaço para barraca, Campus Party Brasilia 2018", "2017-10-01",
+ 		 "Duis molestie sem dui, nec porttitor ipsum aliquam lobortis",
+ 		  2, 2);
+
+INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, dsc_anuncio, cod_usuario, cod_imovel)
+ VALUES ("Espaço para barraca, Porão do Rock 2017","2017-11-01",
+ 		 "Ut enim mi, mollis non imperdiet ut, iaculis ut risus",
+ 		  3, 3);
+
+INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, dsc_anuncio, cod_usuario, cod_imovel)
+ VALUES ("Quarto Presidencial, Grand Bittar", "2017-01-20",
+ 		 "Sed quis nunc ac ligula auctor sagittis a quis mauris",
+ 		  1, 4);
+
+INSERT INTO tb_anuncio (nme_anuncio, dta_criacao_anuncio, dsc_anuncio, cod_usuario, cod_imovel)
+ VALUES ("Apartamento para Locação, 308 Norte bloco C", "2017-08-25",
+ 		 "Maecenas et gravida nulla, id sagittis purus",
+ 		  4, 5);
 --
 --
 --
@@ -64,13 +86,13 @@ INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) V
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Bujari', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Capixaba', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Cruzeiro do Sul', 'N', 1);
-INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Epitaciolândia', 'N' 1);
+INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Epitaciolândia', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Feijó', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Jordão', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Mâncio Lima', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Manoel Urbano', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Marechal Thaumaturgo', 'N', 1);
-INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Plácido de Castro', 'N' 1);
+INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Plácido de Castro', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Porto Acre', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Porto Walter', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Rio Branco', 'C', 1);
@@ -80,7 +102,7 @@ INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) V
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Senador Guiomard', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Tarauacá', 'N', 1);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Xapuri', 'N', 1);
-INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Água Branca', 'N' 2);
+INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Água Branca', 'N', 2);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Anadia', "N", 2);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Arapiraca', "N", 2);
 INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) VALUES('Atalaia', "N", 2);
@@ -5236,28 +5258,86 @@ INSERT INTO td_cidade (nme_cidade, sts_capital_cidade, cod_unidade_federativa) V
 --
 --
 /**********************ta_comentarios***********************/
+INSERT INTO ta_comentarios (cmt_comentarios, cod_usuario, cod_anuncio)
+ VALUES ('Lorem ipsum dolor sit amet, consectetur adipiscing elit', 1, 1);
+
+INSERT INTO ta_comentarios (cmt_comentarios, cod_usuario, cod_anuncio)
+ VALUES ('Proin in ipsum elementum dui egestas consectetur tempus a lectus', 1, 2);
+
+INSERT INTO ta_comentarios (cmt_comentarios, cod_usuario, cod_anuncio)
+ VALUES ('Donec convallis lacus at convallis auctor', 5, 1);
+
+INSERT INTO ta_comentarios (cmt_comentarios, cod_usuario, cod_anuncio)
+ VALUES ('Nunc pharetra ante eu risus ultrices eleifend', 5, 2);
+
+INSERT INTO ta_comentarios (cmt_comentarios, cod_usuario, cod_anuncio)
+ VALUES ('Sed at vehicula ex. Vivamus viverra egestas magna, non suscipit libero tincidunt ac.', 6, 1);
+
+INSERT INTO ta_comentarios (cmt_comentarios, cod_usuario, cod_anuncio)
+ VALUES ('Integer vitae dictum est', 6, 4);
+
+INSERT INTO ta_comentarios (cmt_comentarios, cod_usuario, cod_anuncio)
+ VALUES ('Morbi efficitur eget nisi eu ullamcorper', 6, 1);
 --
 --
 --
 /**********************td_comodidades***********************/
---
---
---
-/**********************tb_espaco***********************/
+INSERT INTO td_comodidades (nme_comodiades, cod_espaco)
+ VALUES ('Banheira', 1);
+
+INSERT INTO td_comodidades (nme_comodiades, cod_espaco)
+ VALUES ('Cama de Casal', 1);
+
+INSERT INTO td_comodidades (nme_comodiades, cod_espaco)
+ VALUES ('Cama de Solteiro', 2);
+
+INSERT INTO td_comodidades (nme_comodiades, cod_espaco) 
+ VALUES ('Frigobar', 1);
+
+INSERT INTO td_comodidades (nme_comodiades, cod_espaco)
+ VALUES ('Bar', 7);
+
+INSERT INTO td_comodidades (nme_comodiades, cod_espaco)
+ VALUES ('Varanda', 2);
+
+INSERT INTO td_comodidades (nme_comodiades, cod_espaco)
+ VALUES ('Internet Rápida', 2);
+
+INSERT INTO td_comodidades (nme_comodiades, cod_espaco)
+ VALUES ('Cozinha', 2);
 --
 --
 --
 /**********************td_forma_pagamento***********************/
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("Visa");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("MasterCard");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("Boleto Bancário");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("PayPal");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("Transferência Bancária");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("Bitcoin");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("Itau Online");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("Banco do Brasil Online");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("Ethereum");
-INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("PagSeguro");
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("Visa");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("MasterCard");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("Boleto Bancário");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("PayPal");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("Transferência Bancária");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("Bitcoin");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("Itau Online");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("Banco do Brasil Online");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("Ethereum");
+
+INSERT INTO td_forma_pagamento (nme_forma_pagamento)
+ VALUES ("PagSeguro");
 --
 --
 --
@@ -5266,37 +5346,1035 @@ INSERT INTO td_forma_pagamento (nme_forma_pagamento) VALUES ("PagSeguro");
 --
 --
 /**********************td_num_casa***********************/
+INSERT INTO td_num_casa (id_casa) VALUES (0);
+INSERT INTO td_num_casa (id_casa) VALUES (1);
+INSERT INTO td_num_casa (id_casa) VALUES (2);
+INSERT INTO td_num_casa (id_casa) VALUES (3);
+INSERT INTO td_num_casa (id_casa) VALUES (4);
+INSERT INTO td_num_casa (id_casa) VALUES (5);
+INSERT INTO td_num_casa (id_casa) VALUES (6);
+INSERT INTO td_num_casa (id_casa) VALUES (7);
+INSERT INTO td_num_casa (id_casa) VALUES (8);
+INSERT INTO td_num_casa (id_casa) VALUES (9);
+INSERT INTO td_num_casa (id_casa) VALUES (10);
+INSERT INTO td_num_casa (id_casa) VALUES (11);
+INSERT INTO td_num_casa (id_casa) VALUES (12);
+INSERT INTO td_num_casa (id_casa) VALUES (13);
+INSERT INTO td_num_casa (id_casa) VALUES (14);
+INSERT INTO td_num_casa (id_casa) VALUES (15);
+INSERT INTO td_num_casa (id_casa) VALUES (16);
+INSERT INTO td_num_casa (id_casa) VALUES (17);
+INSERT INTO td_num_casa (id_casa) VALUES (18);
+INSERT INTO td_num_casa (id_casa) VALUES (19);
+INSERT INTO td_num_casa (id_casa) VALUES (20);
+INSERT INTO td_num_casa (id_casa) VALUES (21);
+INSERT INTO td_num_casa (id_casa) VALUES (22);
+INSERT INTO td_num_casa (id_casa) VALUES (23);
+INSERT INTO td_num_casa (id_casa) VALUES (24);
+INSERT INTO td_num_casa (id_casa) VALUES (25);
+INSERT INTO td_num_casa (id_casa) VALUES (26);
+INSERT INTO td_num_casa (id_casa) VALUES (27);
+INSERT INTO td_num_casa (id_casa) VALUES (28);
+INSERT INTO td_num_casa (id_casa) VALUES (29);
+INSERT INTO td_num_casa (id_casa) VALUES (30);
+INSERT INTO td_num_casa (id_casa) VALUES (31);
+INSERT INTO td_num_casa (id_casa) VALUES (32);
+INSERT INTO td_num_casa (id_casa) VALUES (33);
+INSERT INTO td_num_casa (id_casa) VALUES (34);
+INSERT INTO td_num_casa (id_casa) VALUES (35);
+INSERT INTO td_num_casa (id_casa) VALUES (36);
+INSERT INTO td_num_casa (id_casa) VALUES (37);
+INSERT INTO td_num_casa (id_casa) VALUES (38);
+INSERT INTO td_num_casa (id_casa) VALUES (39);
+INSERT INTO td_num_casa (id_casa) VALUES (40);
+INSERT INTO td_num_casa (id_casa) VALUES (41);
+INSERT INTO td_num_casa (id_casa) VALUES (42);
+INSERT INTO td_num_casa (id_casa) VALUES (43);
+INSERT INTO td_num_casa (id_casa) VALUES (44);
+INSERT INTO td_num_casa (id_casa) VALUES (45);
+INSERT INTO td_num_casa (id_casa) VALUES (46);
+INSERT INTO td_num_casa (id_casa) VALUES (47);
+INSERT INTO td_num_casa (id_casa) VALUES (48);
+INSERT INTO td_num_casa (id_casa) VALUES (49);
+INSERT INTO td_num_casa (id_casa) VALUES (50);
+INSERT INTO td_num_casa (id_casa) VALUES (51);
+INSERT INTO td_num_casa (id_casa) VALUES (52);
+INSERT INTO td_num_casa (id_casa) VALUES (53);
+INSERT INTO td_num_casa (id_casa) VALUES (54);
+INSERT INTO td_num_casa (id_casa) VALUES (55);
+INSERT INTO td_num_casa (id_casa) VALUES (56);
+INSERT INTO td_num_casa (id_casa) VALUES (57);
+INSERT INTO td_num_casa (id_casa) VALUES (58);
+INSERT INTO td_num_casa (id_casa) VALUES (59);
+INSERT INTO td_num_casa (id_casa) VALUES (60);
+INSERT INTO td_num_casa (id_casa) VALUES (61);
+INSERT INTO td_num_casa (id_casa) VALUES (62);
+INSERT INTO td_num_casa (id_casa) VALUES (63);
+INSERT INTO td_num_casa (id_casa) VALUES (64);
+INSERT INTO td_num_casa (id_casa) VALUES (65);
+INSERT INTO td_num_casa (id_casa) VALUES (66);
+INSERT INTO td_num_casa (id_casa) VALUES (67);
+INSERT INTO td_num_casa (id_casa) VALUES (68);
+INSERT INTO td_num_casa (id_casa) VALUES (69);
+INSERT INTO td_num_casa (id_casa) VALUES (70);
+INSERT INTO td_num_casa (id_casa) VALUES (71);
+INSERT INTO td_num_casa (id_casa) VALUES (72);
+INSERT INTO td_num_casa (id_casa) VALUES (73);
+INSERT INTO td_num_casa (id_casa) VALUES (74);
+INSERT INTO td_num_casa (id_casa) VALUES (75);
+INSERT INTO td_num_casa (id_casa) VALUES (76);
+INSERT INTO td_num_casa (id_casa) VALUES (77);
+INSERT INTO td_num_casa (id_casa) VALUES (78);
+INSERT INTO td_num_casa (id_casa) VALUES (79);
+INSERT INTO td_num_casa (id_casa) VALUES (80);
+INSERT INTO td_num_casa (id_casa) VALUES (81);
+INSERT INTO td_num_casa (id_casa) VALUES (82);
+INSERT INTO td_num_casa (id_casa) VALUES (83);
+INSERT INTO td_num_casa (id_casa) VALUES (84);
+INSERT INTO td_num_casa (id_casa) VALUES (85);
+INSERT INTO td_num_casa (id_casa) VALUES (86);
+INSERT INTO td_num_casa (id_casa) VALUES (87);
+INSERT INTO td_num_casa (id_casa) VALUES (88);
+INSERT INTO td_num_casa (id_casa) VALUES (89);
+INSERT INTO td_num_casa (id_casa) VALUES (90);
+INSERT INTO td_num_casa (id_casa) VALUES (91);
+INSERT INTO td_num_casa (id_casa) VALUES (92);
+INSERT INTO td_num_casa (id_casa) VALUES (93);
+INSERT INTO td_num_casa (id_casa) VALUES (94);
+INSERT INTO td_num_casa (id_casa) VALUES (95);
+INSERT INTO td_num_casa (id_casa) VALUES (96);
+INSERT INTO td_num_casa (id_casa) VALUES (97);
+INSERT INTO td_num_casa (id_casa) VALUES (98);
+INSERT INTO td_num_casa (id_casa) VALUES (99);
+INSERT INTO td_num_casa (id_casa) VALUES (100);
+INSERT INTO td_num_casa (id_casa) VALUES (101);
+INSERT INTO td_num_casa (id_casa) VALUES (102);
+INSERT INTO td_num_casa (id_casa) VALUES (103);
+INSERT INTO td_num_casa (id_casa) VALUES (104);
+INSERT INTO td_num_casa (id_casa) VALUES (105);
+INSERT INTO td_num_casa (id_casa) VALUES (106);
+INSERT INTO td_num_casa (id_casa) VALUES (107);
+INSERT INTO td_num_casa (id_casa) VALUES (108);
+INSERT INTO td_num_casa (id_casa) VALUES (109);
+INSERT INTO td_num_casa (id_casa) VALUES (110);
+INSERT INTO td_num_casa (id_casa) VALUES (111);
+INSERT INTO td_num_casa (id_casa) VALUES (112);
+INSERT INTO td_num_casa (id_casa) VALUES (113);
+INSERT INTO td_num_casa (id_casa) VALUES (114);
+INSERT INTO td_num_casa (id_casa) VALUES (115);
+INSERT INTO td_num_casa (id_casa) VALUES (116);
+INSERT INTO td_num_casa (id_casa) VALUES (117);
+INSERT INTO td_num_casa (id_casa) VALUES (118);
+INSERT INTO td_num_casa (id_casa) VALUES (119);
+INSERT INTO td_num_casa (id_casa) VALUES (120);
+INSERT INTO td_num_casa (id_casa) VALUES (121);
+INSERT INTO td_num_casa (id_casa) VALUES (122);
+INSERT INTO td_num_casa (id_casa) VALUES (123);
+INSERT INTO td_num_casa (id_casa) VALUES (124);
+INSERT INTO td_num_casa (id_casa) VALUES (125);
+INSERT INTO td_num_casa (id_casa) VALUES (126);
+INSERT INTO td_num_casa (id_casa) VALUES (127);
+INSERT INTO td_num_casa (id_casa) VALUES (128);
+INSERT INTO td_num_casa (id_casa) VALUES (129);
+INSERT INTO td_num_casa (id_casa) VALUES (130);
+INSERT INTO td_num_casa (id_casa) VALUES (131);
+INSERT INTO td_num_casa (id_casa) VALUES (132);
+INSERT INTO td_num_casa (id_casa) VALUES (133);
+INSERT INTO td_num_casa (id_casa) VALUES (134);
+INSERT INTO td_num_casa (id_casa) VALUES (135);
+INSERT INTO td_num_casa (id_casa) VALUES (136);
+INSERT INTO td_num_casa (id_casa) VALUES (137);
+INSERT INTO td_num_casa (id_casa) VALUES (138);
+INSERT INTO td_num_casa (id_casa) VALUES (139);
+INSERT INTO td_num_casa (id_casa) VALUES (140);
+INSERT INTO td_num_casa (id_casa) VALUES (141);
+INSERT INTO td_num_casa (id_casa) VALUES (142);
+INSERT INTO td_num_casa (id_casa) VALUES (143);
+INSERT INTO td_num_casa (id_casa) VALUES (144);
+INSERT INTO td_num_casa (id_casa) VALUES (145);
+INSERT INTO td_num_casa (id_casa) VALUES (146);
+INSERT INTO td_num_casa (id_casa) VALUES (147);
+INSERT INTO td_num_casa (id_casa) VALUES (148);
+INSERT INTO td_num_casa (id_casa) VALUES (149);
+INSERT INTO td_num_casa (id_casa) VALUES (150);
+INSERT INTO td_num_casa (id_casa) VALUES (151);
+INSERT INTO td_num_casa (id_casa) VALUES (152);
+INSERT INTO td_num_casa (id_casa) VALUES (153);
+INSERT INTO td_num_casa (id_casa) VALUES (154);
+INSERT INTO td_num_casa (id_casa) VALUES (155);
+INSERT INTO td_num_casa (id_casa) VALUES (156);
+INSERT INTO td_num_casa (id_casa) VALUES (157);
+INSERT INTO td_num_casa (id_casa) VALUES (158);
+INSERT INTO td_num_casa (id_casa) VALUES (159);
+INSERT INTO td_num_casa (id_casa) VALUES (160);
+INSERT INTO td_num_casa (id_casa) VALUES (161);
+INSERT INTO td_num_casa (id_casa) VALUES (162);
+INSERT INTO td_num_casa (id_casa) VALUES (163);
+INSERT INTO td_num_casa (id_casa) VALUES (164);
+INSERT INTO td_num_casa (id_casa) VALUES (165);
+INSERT INTO td_num_casa (id_casa) VALUES (166);
+INSERT INTO td_num_casa (id_casa) VALUES (167);
+INSERT INTO td_num_casa (id_casa) VALUES (168);
+INSERT INTO td_num_casa (id_casa) VALUES (169);
+INSERT INTO td_num_casa (id_casa) VALUES (170);
+INSERT INTO td_num_casa (id_casa) VALUES (171);
+INSERT INTO td_num_casa (id_casa) VALUES (172);
+INSERT INTO td_num_casa (id_casa) VALUES (173);
+INSERT INTO td_num_casa (id_casa) VALUES (174);
+INSERT INTO td_num_casa (id_casa) VALUES (175);
+INSERT INTO td_num_casa (id_casa) VALUES (176);
+INSERT INTO td_num_casa (id_casa) VALUES (177);
+INSERT INTO td_num_casa (id_casa) VALUES (178);
+INSERT INTO td_num_casa (id_casa) VALUES (179);
+INSERT INTO td_num_casa (id_casa) VALUES (180);
+INSERT INTO td_num_casa (id_casa) VALUES (181);
+INSERT INTO td_num_casa (id_casa) VALUES (182);
+INSERT INTO td_num_casa (id_casa) VALUES (183);
+INSERT INTO td_num_casa (id_casa) VALUES (184);
+INSERT INTO td_num_casa (id_casa) VALUES (185);
+INSERT INTO td_num_casa (id_casa) VALUES (186);
+INSERT INTO td_num_casa (id_casa) VALUES (187);
+INSERT INTO td_num_casa (id_casa) VALUES (188);
+INSERT INTO td_num_casa (id_casa) VALUES (189);
+INSERT INTO td_num_casa (id_casa) VALUES (190);
+INSERT INTO td_num_casa (id_casa) VALUES (191);
+INSERT INTO td_num_casa (id_casa) VALUES (192);
+INSERT INTO td_num_casa (id_casa) VALUES (193);
+INSERT INTO td_num_casa (id_casa) VALUES (194);
+INSERT INTO td_num_casa (id_casa) VALUES (195);
+INSERT INTO td_num_casa (id_casa) VALUES (196);
+INSERT INTO td_num_casa (id_casa) VALUES (197);
+INSERT INTO td_num_casa (id_casa) VALUES (198);
+INSERT INTO td_num_casa (id_casa) VALUES (199);
+INSERT INTO td_num_casa (id_casa) VALUES (200);
+INSERT INTO td_num_casa (id_casa) VALUES (201);
+INSERT INTO td_num_casa (id_casa) VALUES (202);
+INSERT INTO td_num_casa (id_casa) VALUES (203);
+INSERT INTO td_num_casa (id_casa) VALUES (204);
+INSERT INTO td_num_casa (id_casa) VALUES (205);
+INSERT INTO td_num_casa (id_casa) VALUES (206);
+INSERT INTO td_num_casa (id_casa) VALUES (207);
+INSERT INTO td_num_casa (id_casa) VALUES (208);
+INSERT INTO td_num_casa (id_casa) VALUES (209);
+INSERT INTO td_num_casa (id_casa) VALUES (210);
+INSERT INTO td_num_casa (id_casa) VALUES (211);
+INSERT INTO td_num_casa (id_casa) VALUES (212);
+INSERT INTO td_num_casa (id_casa) VALUES (213);
+INSERT INTO td_num_casa (id_casa) VALUES (214);
+INSERT INTO td_num_casa (id_casa) VALUES (215);
+INSERT INTO td_num_casa (id_casa) VALUES (216);
+INSERT INTO td_num_casa (id_casa) VALUES (217);
+INSERT INTO td_num_casa (id_casa) VALUES (218);
+INSERT INTO td_num_casa (id_casa) VALUES (219);
+INSERT INTO td_num_casa (id_casa) VALUES (220);
+INSERT INTO td_num_casa (id_casa) VALUES (221);
+INSERT INTO td_num_casa (id_casa) VALUES (222);
+INSERT INTO td_num_casa (id_casa) VALUES (223);
+INSERT INTO td_num_casa (id_casa) VALUES (224);
+INSERT INTO td_num_casa (id_casa) VALUES (225);
+INSERT INTO td_num_casa (id_casa) VALUES (226);
+INSERT INTO td_num_casa (id_casa) VALUES (227);
+INSERT INTO td_num_casa (id_casa) VALUES (228);
+INSERT INTO td_num_casa (id_casa) VALUES (229);
+INSERT INTO td_num_casa (id_casa) VALUES (230);
+INSERT INTO td_num_casa (id_casa) VALUES (231);
+INSERT INTO td_num_casa (id_casa) VALUES (232);
+INSERT INTO td_num_casa (id_casa) VALUES (233);
+INSERT INTO td_num_casa (id_casa) VALUES (234);
+INSERT INTO td_num_casa (id_casa) VALUES (235);
+INSERT INTO td_num_casa (id_casa) VALUES (236);
+INSERT INTO td_num_casa (id_casa) VALUES (237);
+INSERT INTO td_num_casa (id_casa) VALUES (238);
+INSERT INTO td_num_casa (id_casa) VALUES (239);
+INSERT INTO td_num_casa (id_casa) VALUES (240);
+INSERT INTO td_num_casa (id_casa) VALUES (241);
+INSERT INTO td_num_casa (id_casa) VALUES (242);
+INSERT INTO td_num_casa (id_casa) VALUES (243);
+INSERT INTO td_num_casa (id_casa) VALUES (244);
+INSERT INTO td_num_casa (id_casa) VALUES (245);
+INSERT INTO td_num_casa (id_casa) VALUES (246);
+INSERT INTO td_num_casa (id_casa) VALUES (247);
+INSERT INTO td_num_casa (id_casa) VALUES (248);
+INSERT INTO td_num_casa (id_casa) VALUES (249);
+INSERT INTO td_num_casa (id_casa) VALUES (250);
+INSERT INTO td_num_casa (id_casa) VALUES (251);
+INSERT INTO td_num_casa (id_casa) VALUES (252);
+INSERT INTO td_num_casa (id_casa) VALUES (253);
+INSERT INTO td_num_casa (id_casa) VALUES (254);
+INSERT INTO td_num_casa (id_casa) VALUES (255);
+INSERT INTO td_num_casa (id_casa) VALUES (256);
+INSERT INTO td_num_casa (id_casa) VALUES (257);
+INSERT INTO td_num_casa (id_casa) VALUES (258);
+INSERT INTO td_num_casa (id_casa) VALUES (259);
+INSERT INTO td_num_casa (id_casa) VALUES (260);
+INSERT INTO td_num_casa (id_casa) VALUES (261);
+INSERT INTO td_num_casa (id_casa) VALUES (262);
+INSERT INTO td_num_casa (id_casa) VALUES (263);
+INSERT INTO td_num_casa (id_casa) VALUES (264);
+INSERT INTO td_num_casa (id_casa) VALUES (265);
+INSERT INTO td_num_casa (id_casa) VALUES (266);
+INSERT INTO td_num_casa (id_casa) VALUES (267);
+INSERT INTO td_num_casa (id_casa) VALUES (268);
+INSERT INTO td_num_casa (id_casa) VALUES (269);
+INSERT INTO td_num_casa (id_casa) VALUES (270);
+INSERT INTO td_num_casa (id_casa) VALUES (271);
+INSERT INTO td_num_casa (id_casa) VALUES (272);
+INSERT INTO td_num_casa (id_casa) VALUES (273);
+INSERT INTO td_num_casa (id_casa) VALUES (274);
+INSERT INTO td_num_casa (id_casa) VALUES (275);
+INSERT INTO td_num_casa (id_casa) VALUES (276);
+INSERT INTO td_num_casa (id_casa) VALUES (277);
+INSERT INTO td_num_casa (id_casa) VALUES (278);
+INSERT INTO td_num_casa (id_casa) VALUES (279);
+INSERT INTO td_num_casa (id_casa) VALUES (280);
+INSERT INTO td_num_casa (id_casa) VALUES (281);
+INSERT INTO td_num_casa (id_casa) VALUES (282);
+INSERT INTO td_num_casa (id_casa) VALUES (283);
+INSERT INTO td_num_casa (id_casa) VALUES (284);
+INSERT INTO td_num_casa (id_casa) VALUES (285);
+INSERT INTO td_num_casa (id_casa) VALUES (286);
+INSERT INTO td_num_casa (id_casa) VALUES (287);
+INSERT INTO td_num_casa (id_casa) VALUES (288);
+INSERT INTO td_num_casa (id_casa) VALUES (289);
+INSERT INTO td_num_casa (id_casa) VALUES (290);
+INSERT INTO td_num_casa (id_casa) VALUES (291);
+INSERT INTO td_num_casa (id_casa) VALUES (292);
+INSERT INTO td_num_casa (id_casa) VALUES (293);
+INSERT INTO td_num_casa (id_casa) VALUES (294);
+INSERT INTO td_num_casa (id_casa) VALUES (295);
+INSERT INTO td_num_casa (id_casa) VALUES (296);
+INSERT INTO td_num_casa (id_casa) VALUES (297);
+INSERT INTO td_num_casa (id_casa) VALUES (298);
+INSERT INTO td_num_casa (id_casa) VALUES (299);
+INSERT INTO td_num_casa (id_casa) VALUES (300);
+INSERT INTO td_num_casa (id_casa) VALUES (301);
+INSERT INTO td_num_casa (id_casa) VALUES (302);
+INSERT INTO td_num_casa (id_casa) VALUES (303);
+INSERT INTO td_num_casa (id_casa) VALUES (304);
+INSERT INTO td_num_casa (id_casa) VALUES (305);
+INSERT INTO td_num_casa (id_casa) VALUES (306);
+INSERT INTO td_num_casa (id_casa) VALUES (307);
+INSERT INTO td_num_casa (id_casa) VALUES (308);
+INSERT INTO td_num_casa (id_casa) VALUES (309);
+INSERT INTO td_num_casa (id_casa) VALUES (310);
+INSERT INTO td_num_casa (id_casa) VALUES (311);
+INSERT INTO td_num_casa (id_casa) VALUES (312);
+INSERT INTO td_num_casa (id_casa) VALUES (313);
+INSERT INTO td_num_casa (id_casa) VALUES (314);
+INSERT INTO td_num_casa (id_casa) VALUES (315);
+INSERT INTO td_num_casa (id_casa) VALUES (316);
+INSERT INTO td_num_casa (id_casa) VALUES (317);
+INSERT INTO td_num_casa (id_casa) VALUES (318);
+INSERT INTO td_num_casa (id_casa) VALUES (319);
+INSERT INTO td_num_casa (id_casa) VALUES (320);
+INSERT INTO td_num_casa (id_casa) VALUES (321);
+INSERT INTO td_num_casa (id_casa) VALUES (322);
+INSERT INTO td_num_casa (id_casa) VALUES (323);
+INSERT INTO td_num_casa (id_casa) VALUES (324);
+INSERT INTO td_num_casa (id_casa) VALUES (325);
+INSERT INTO td_num_casa (id_casa) VALUES (326);
+INSERT INTO td_num_casa (id_casa) VALUES (327);
+INSERT INTO td_num_casa (id_casa) VALUES (328);
+INSERT INTO td_num_casa (id_casa) VALUES (329);
+INSERT INTO td_num_casa (id_casa) VALUES (330);
+INSERT INTO td_num_casa (id_casa) VALUES (331);
+INSERT INTO td_num_casa (id_casa) VALUES (332);
+INSERT INTO td_num_casa (id_casa) VALUES (333);
+INSERT INTO td_num_casa (id_casa) VALUES (334);
+INSERT INTO td_num_casa (id_casa) VALUES (335);
+INSERT INTO td_num_casa (id_casa) VALUES (336);
+INSERT INTO td_num_casa (id_casa) VALUES (337);
+INSERT INTO td_num_casa (id_casa) VALUES (338);
+INSERT INTO td_num_casa (id_casa) VALUES (339);
+INSERT INTO td_num_casa (id_casa) VALUES (340);
+INSERT INTO td_num_casa (id_casa) VALUES (341);
+INSERT INTO td_num_casa (id_casa) VALUES (342);
+INSERT INTO td_num_casa (id_casa) VALUES (343);
+INSERT INTO td_num_casa (id_casa) VALUES (344);
+INSERT INTO td_num_casa (id_casa) VALUES (345);
+INSERT INTO td_num_casa (id_casa) VALUES (346);
+INSERT INTO td_num_casa (id_casa) VALUES (347);
+INSERT INTO td_num_casa (id_casa) VALUES (348);
+INSERT INTO td_num_casa (id_casa) VALUES (349);
+INSERT INTO td_num_casa (id_casa) VALUES (350);
+INSERT INTO td_num_casa (id_casa) VALUES (351);
+INSERT INTO td_num_casa (id_casa) VALUES (352);
+INSERT INTO td_num_casa (id_casa) VALUES (353);
+INSERT INTO td_num_casa (id_casa) VALUES (354);
+INSERT INTO td_num_casa (id_casa) VALUES (355);
+INSERT INTO td_num_casa (id_casa) VALUES (356);
+INSERT INTO td_num_casa (id_casa) VALUES (357);
+INSERT INTO td_num_casa (id_casa) VALUES (358);
+INSERT INTO td_num_casa (id_casa) VALUES (359);
+INSERT INTO td_num_casa (id_casa) VALUES (360);
+INSERT INTO td_num_casa (id_casa) VALUES (361);
+INSERT INTO td_num_casa (id_casa) VALUES (362);
+INSERT INTO td_num_casa (id_casa) VALUES (363);
+INSERT INTO td_num_casa (id_casa) VALUES (364);
+INSERT INTO td_num_casa (id_casa) VALUES (365);
+INSERT INTO td_num_casa (id_casa) VALUES (366);
+INSERT INTO td_num_casa (id_casa) VALUES (367);
+INSERT INTO td_num_casa (id_casa) VALUES (368);
+INSERT INTO td_num_casa (id_casa) VALUES (369);
+INSERT INTO td_num_casa (id_casa) VALUES (370);
+INSERT INTO td_num_casa (id_casa) VALUES (371);
+INSERT INTO td_num_casa (id_casa) VALUES (372);
+INSERT INTO td_num_casa (id_casa) VALUES (373);
+INSERT INTO td_num_casa (id_casa) VALUES (374);
+INSERT INTO td_num_casa (id_casa) VALUES (375);
+INSERT INTO td_num_casa (id_casa) VALUES (376);
+INSERT INTO td_num_casa (id_casa) VALUES (377);
+INSERT INTO td_num_casa (id_casa) VALUES (378);
+INSERT INTO td_num_casa (id_casa) VALUES (379);
+INSERT INTO td_num_casa (id_casa) VALUES (380);
+INSERT INTO td_num_casa (id_casa) VALUES (381);
+INSERT INTO td_num_casa (id_casa) VALUES (382);
+INSERT INTO td_num_casa (id_casa) VALUES (383);
+INSERT INTO td_num_casa (id_casa) VALUES (384);
+INSERT INTO td_num_casa (id_casa) VALUES (385);
+INSERT INTO td_num_casa (id_casa) VALUES (386);
+INSERT INTO td_num_casa (id_casa) VALUES (387);
+INSERT INTO td_num_casa (id_casa) VALUES (388);
+INSERT INTO td_num_casa (id_casa) VALUES (389);
+INSERT INTO td_num_casa (id_casa) VALUES (390);
+INSERT INTO td_num_casa (id_casa) VALUES (391);
+INSERT INTO td_num_casa (id_casa) VALUES (392);
+INSERT INTO td_num_casa (id_casa) VALUES (393);
+INSERT INTO td_num_casa (id_casa) VALUES (394);
+INSERT INTO td_num_casa (id_casa) VALUES (395);
+INSERT INTO td_num_casa (id_casa) VALUES (396);
+INSERT INTO td_num_casa (id_casa) VALUES (397);
+INSERT INTO td_num_casa (id_casa) VALUES (398);
+INSERT INTO td_num_casa (id_casa) VALUES (399);
+INSERT INTO td_num_casa (id_casa) VALUES (400);
+INSERT INTO td_num_casa (id_casa) VALUES (401);
+INSERT INTO td_num_casa (id_casa) VALUES (402);
+INSERT INTO td_num_casa (id_casa) VALUES (403);
+INSERT INTO td_num_casa (id_casa) VALUES (404);
+INSERT INTO td_num_casa (id_casa) VALUES (405);
+INSERT INTO td_num_casa (id_casa) VALUES (406);
+INSERT INTO td_num_casa (id_casa) VALUES (407);
+INSERT INTO td_num_casa (id_casa) VALUES (408);
+INSERT INTO td_num_casa (id_casa) VALUES (409);
+INSERT INTO td_num_casa (id_casa) VALUES (410);
+INSERT INTO td_num_casa (id_casa) VALUES (411);
+INSERT INTO td_num_casa (id_casa) VALUES (412);
+INSERT INTO td_num_casa (id_casa) VALUES (413);
+INSERT INTO td_num_casa (id_casa) VALUES (414);
+INSERT INTO td_num_casa (id_casa) VALUES (415);
+INSERT INTO td_num_casa (id_casa) VALUES (416);
+INSERT INTO td_num_casa (id_casa) VALUES (417);
+INSERT INTO td_num_casa (id_casa) VALUES (418);
+INSERT INTO td_num_casa (id_casa) VALUES (419);
+INSERT INTO td_num_casa (id_casa) VALUES (420);
+INSERT INTO td_num_casa (id_casa) VALUES (421);
+INSERT INTO td_num_casa (id_casa) VALUES (422);
+INSERT INTO td_num_casa (id_casa) VALUES (423);
+INSERT INTO td_num_casa (id_casa) VALUES (424);
+INSERT INTO td_num_casa (id_casa) VALUES (425);
+INSERT INTO td_num_casa (id_casa) VALUES (426);
+INSERT INTO td_num_casa (id_casa) VALUES (427);
+INSERT INTO td_num_casa (id_casa) VALUES (428);
+INSERT INTO td_num_casa (id_casa) VALUES (429);
+INSERT INTO td_num_casa (id_casa) VALUES (430);
+INSERT INTO td_num_casa (id_casa) VALUES (431);
+INSERT INTO td_num_casa (id_casa) VALUES (432);
+INSERT INTO td_num_casa (id_casa) VALUES (433);
+INSERT INTO td_num_casa (id_casa) VALUES (434);
+INSERT INTO td_num_casa (id_casa) VALUES (435);
+INSERT INTO td_num_casa (id_casa) VALUES (436);
+INSERT INTO td_num_casa (id_casa) VALUES (437);
+INSERT INTO td_num_casa (id_casa) VALUES (438);
+INSERT INTO td_num_casa (id_casa) VALUES (439);
+INSERT INTO td_num_casa (id_casa) VALUES (440);
+INSERT INTO td_num_casa (id_casa) VALUES (441);
+INSERT INTO td_num_casa (id_casa) VALUES (442);
+INSERT INTO td_num_casa (id_casa) VALUES (443);
+INSERT INTO td_num_casa (id_casa) VALUES (444);
+INSERT INTO td_num_casa (id_casa) VALUES (445);
+INSERT INTO td_num_casa (id_casa) VALUES (446);
+INSERT INTO td_num_casa (id_casa) VALUES (447);
+INSERT INTO td_num_casa (id_casa) VALUES (448);
+INSERT INTO td_num_casa (id_casa) VALUES (449);
+INSERT INTO td_num_casa (id_casa) VALUES (450);
+INSERT INTO td_num_casa (id_casa) VALUES (451);
+INSERT INTO td_num_casa (id_casa) VALUES (452);
+INSERT INTO td_num_casa (id_casa) VALUES (453);
+INSERT INTO td_num_casa (id_casa) VALUES (454);
+INSERT INTO td_num_casa (id_casa) VALUES (455);
+INSERT INTO td_num_casa (id_casa) VALUES (456);
+INSERT INTO td_num_casa (id_casa) VALUES (457);
+INSERT INTO td_num_casa (id_casa) VALUES (458);
+INSERT INTO td_num_casa (id_casa) VALUES (459);
+INSERT INTO td_num_casa (id_casa) VALUES (460);
+INSERT INTO td_num_casa (id_casa) VALUES (461);
+INSERT INTO td_num_casa (id_casa) VALUES (462);
+INSERT INTO td_num_casa (id_casa) VALUES (463);
+INSERT INTO td_num_casa (id_casa) VALUES (464);
+INSERT INTO td_num_casa (id_casa) VALUES (465);
+INSERT INTO td_num_casa (id_casa) VALUES (466);
+INSERT INTO td_num_casa (id_casa) VALUES (467);
+INSERT INTO td_num_casa (id_casa) VALUES (468);
+INSERT INTO td_num_casa (id_casa) VALUES (469);
+INSERT INTO td_num_casa (id_casa) VALUES (470);
+INSERT INTO td_num_casa (id_casa) VALUES (471);
+INSERT INTO td_num_casa (id_casa) VALUES (472);
+INSERT INTO td_num_casa (id_casa) VALUES (473);
+INSERT INTO td_num_casa (id_casa) VALUES (474);
+INSERT INTO td_num_casa (id_casa) VALUES (475);
+INSERT INTO td_num_casa (id_casa) VALUES (476);
+INSERT INTO td_num_casa (id_casa) VALUES (477);
+INSERT INTO td_num_casa (id_casa) VALUES (478);
+INSERT INTO td_num_casa (id_casa) VALUES (479);
+INSERT INTO td_num_casa (id_casa) VALUES (480);
+INSERT INTO td_num_casa (id_casa) VALUES (481);
+INSERT INTO td_num_casa (id_casa) VALUES (482);
+INSERT INTO td_num_casa (id_casa) VALUES (483);
+INSERT INTO td_num_casa (id_casa) VALUES (484);
+INSERT INTO td_num_casa (id_casa) VALUES (485);
+INSERT INTO td_num_casa (id_casa) VALUES (486);
+INSERT INTO td_num_casa (id_casa) VALUES (487);
+INSERT INTO td_num_casa (id_casa) VALUES (488);
+INSERT INTO td_num_casa (id_casa) VALUES (489);
+INSERT INTO td_num_casa (id_casa) VALUES (490);
+INSERT INTO td_num_casa (id_casa) VALUES (491);
+INSERT INTO td_num_casa (id_casa) VALUES (492);
+INSERT INTO td_num_casa (id_casa) VALUES (493);
+INSERT INTO td_num_casa (id_casa) VALUES (494);
+INSERT INTO td_num_casa (id_casa) VALUES (495);
+INSERT INTO td_num_casa (id_casa) VALUES (496);
+INSERT INTO td_num_casa (id_casa) VALUES (497);
+INSERT INTO td_num_casa (id_casa) VALUES (498);
+INSERT INTO td_num_casa (id_casa) VALUES (499);
+INSERT INTO td_num_casa (id_casa) VALUES (500);
+INSERT INTO td_num_casa (id_casa) VALUES (501);
+INSERT INTO td_num_casa (id_casa) VALUES (502);
+INSERT INTO td_num_casa (id_casa) VALUES (503);
+INSERT INTO td_num_casa (id_casa) VALUES (504);
+INSERT INTO td_num_casa (id_casa) VALUES (505);
+INSERT INTO td_num_casa (id_casa) VALUES (506);
+INSERT INTO td_num_casa (id_casa) VALUES (507);
+INSERT INTO td_num_casa (id_casa) VALUES (508);
+INSERT INTO td_num_casa (id_casa) VALUES (509);
+INSERT INTO td_num_casa (id_casa) VALUES (510);
+INSERT INTO td_num_casa (id_casa) VALUES (511);
+INSERT INTO td_num_casa (id_casa) VALUES (512);
+INSERT INTO td_num_casa (id_casa) VALUES (513);
+INSERT INTO td_num_casa (id_casa) VALUES (514);
+INSERT INTO td_num_casa (id_casa) VALUES (515);
+INSERT INTO td_num_casa (id_casa) VALUES (516);
+INSERT INTO td_num_casa (id_casa) VALUES (517);
+INSERT INTO td_num_casa (id_casa) VALUES (518);
+INSERT INTO td_num_casa (id_casa) VALUES (519);
+INSERT INTO td_num_casa (id_casa) VALUES (520);
+INSERT INTO td_num_casa (id_casa) VALUES (521);
+INSERT INTO td_num_casa (id_casa) VALUES (522);
+INSERT INTO td_num_casa (id_casa) VALUES (523);
+INSERT INTO td_num_casa (id_casa) VALUES (524);
+INSERT INTO td_num_casa (id_casa) VALUES (525);
+INSERT INTO td_num_casa (id_casa) VALUES (526);
+INSERT INTO td_num_casa (id_casa) VALUES (527);
+INSERT INTO td_num_casa (id_casa) VALUES (528);
+INSERT INTO td_num_casa (id_casa) VALUES (529);
+INSERT INTO td_num_casa (id_casa) VALUES (530);
+INSERT INTO td_num_casa (id_casa) VALUES (531);
+INSERT INTO td_num_casa (id_casa) VALUES (532);
+INSERT INTO td_num_casa (id_casa) VALUES (533);
+INSERT INTO td_num_casa (id_casa) VALUES (534);
+INSERT INTO td_num_casa (id_casa) VALUES (535);
+INSERT INTO td_num_casa (id_casa) VALUES (536);
+INSERT INTO td_num_casa (id_casa) VALUES (537);
+INSERT INTO td_num_casa (id_casa) VALUES (538);
+INSERT INTO td_num_casa (id_casa) VALUES (539);
+INSERT INTO td_num_casa (id_casa) VALUES (540);
+INSERT INTO td_num_casa (id_casa) VALUES (541);
+INSERT INTO td_num_casa (id_casa) VALUES (542);
+INSERT INTO td_num_casa (id_casa) VALUES (543);
+INSERT INTO td_num_casa (id_casa) VALUES (544);
+INSERT INTO td_num_casa (id_casa) VALUES (545);
+INSERT INTO td_num_casa (id_casa) VALUES (546);
+INSERT INTO td_num_casa (id_casa) VALUES (547);
+INSERT INTO td_num_casa (id_casa) VALUES (548);
+INSERT INTO td_num_casa (id_casa) VALUES (549);
+INSERT INTO td_num_casa (id_casa) VALUES (550);
+INSERT INTO td_num_casa (id_casa) VALUES (551);
+INSERT INTO td_num_casa (id_casa) VALUES (552);
+INSERT INTO td_num_casa (id_casa) VALUES (553);
+INSERT INTO td_num_casa (id_casa) VALUES (554);
+INSERT INTO td_num_casa (id_casa) VALUES (555);
+INSERT INTO td_num_casa (id_casa) VALUES (556);
+INSERT INTO td_num_casa (id_casa) VALUES (557);
+INSERT INTO td_num_casa (id_casa) VALUES (558);
+INSERT INTO td_num_casa (id_casa) VALUES (559);
+INSERT INTO td_num_casa (id_casa) VALUES (560);
+INSERT INTO td_num_casa (id_casa) VALUES (561);
+INSERT INTO td_num_casa (id_casa) VALUES (562);
+INSERT INTO td_num_casa (id_casa) VALUES (563);
+INSERT INTO td_num_casa (id_casa) VALUES (564);
+INSERT INTO td_num_casa (id_casa) VALUES (565);
+INSERT INTO td_num_casa (id_casa) VALUES (566);
+INSERT INTO td_num_casa (id_casa) VALUES (567);
+INSERT INTO td_num_casa (id_casa) VALUES (568);
+INSERT INTO td_num_casa (id_casa) VALUES (569);
+INSERT INTO td_num_casa (id_casa) VALUES (570);
+INSERT INTO td_num_casa (id_casa) VALUES (571);
+INSERT INTO td_num_casa (id_casa) VALUES (572);
+INSERT INTO td_num_casa (id_casa) VALUES (573);
+INSERT INTO td_num_casa (id_casa) VALUES (574);
+INSERT INTO td_num_casa (id_casa) VALUES (575);
+INSERT INTO td_num_casa (id_casa) VALUES (576);
+INSERT INTO td_num_casa (id_casa) VALUES (577);
+INSERT INTO td_num_casa (id_casa) VALUES (578);
+INSERT INTO td_num_casa (id_casa) VALUES (579);
+INSERT INTO td_num_casa (id_casa) VALUES (580);
+INSERT INTO td_num_casa (id_casa) VALUES (581);
+INSERT INTO td_num_casa (id_casa) VALUES (582);
+INSERT INTO td_num_casa (id_casa) VALUES (583);
+INSERT INTO td_num_casa (id_casa) VALUES (584);
+INSERT INTO td_num_casa (id_casa) VALUES (585);
+INSERT INTO td_num_casa (id_casa) VALUES (586);
+INSERT INTO td_num_casa (id_casa) VALUES (587);
+INSERT INTO td_num_casa (id_casa) VALUES (588);
+INSERT INTO td_num_casa (id_casa) VALUES (589);
+INSERT INTO td_num_casa (id_casa) VALUES (590);
+INSERT INTO td_num_casa (id_casa) VALUES (591);
+INSERT INTO td_num_casa (id_casa) VALUES (592);
+INSERT INTO td_num_casa (id_casa) VALUES (593);
+INSERT INTO td_num_casa (id_casa) VALUES (594);
+INSERT INTO td_num_casa (id_casa) VALUES (595);
+INSERT INTO td_num_casa (id_casa) VALUES (596);
+INSERT INTO td_num_casa (id_casa) VALUES (597);
+INSERT INTO td_num_casa (id_casa) VALUES (598);
+INSERT INTO td_num_casa (id_casa) VALUES (599);
+INSERT INTO td_num_casa (id_casa) VALUES (600);
+INSERT INTO td_num_casa (id_casa) VALUES (601);
+INSERT INTO td_num_casa (id_casa) VALUES (602);
+INSERT INTO td_num_casa (id_casa) VALUES (603);
+INSERT INTO td_num_casa (id_casa) VALUES (604);
+INSERT INTO td_num_casa (id_casa) VALUES (605);
+INSERT INTO td_num_casa (id_casa) VALUES (606);
+INSERT INTO td_num_casa (id_casa) VALUES (607);
+INSERT INTO td_num_casa (id_casa) VALUES (608);
+INSERT INTO td_num_casa (id_casa) VALUES (609);
+INSERT INTO td_num_casa (id_casa) VALUES (610);
+INSERT INTO td_num_casa (id_casa) VALUES (611);
+INSERT INTO td_num_casa (id_casa) VALUES (612);
+INSERT INTO td_num_casa (id_casa) VALUES (613);
+INSERT INTO td_num_casa (id_casa) VALUES (614);
+INSERT INTO td_num_casa (id_casa) VALUES (615);
+INSERT INTO td_num_casa (id_casa) VALUES (616);
+INSERT INTO td_num_casa (id_casa) VALUES (617);
+INSERT INTO td_num_casa (id_casa) VALUES (618);
+INSERT INTO td_num_casa (id_casa) VALUES (619);
+INSERT INTO td_num_casa (id_casa) VALUES (620);
+INSERT INTO td_num_casa (id_casa) VALUES (621);
+INSERT INTO td_num_casa (id_casa) VALUES (622);
+INSERT INTO td_num_casa (id_casa) VALUES (623);
+INSERT INTO td_num_casa (id_casa) VALUES (624);
+INSERT INTO td_num_casa (id_casa) VALUES (625);
+INSERT INTO td_num_casa (id_casa) VALUES (626);
+INSERT INTO td_num_casa (id_casa) VALUES (627);
+INSERT INTO td_num_casa (id_casa) VALUES (628);
+INSERT INTO td_num_casa (id_casa) VALUES (629);
+INSERT INTO td_num_casa (id_casa) VALUES (630);
+INSERT INTO td_num_casa (id_casa) VALUES (631);
+INSERT INTO td_num_casa (id_casa) VALUES (632);
+INSERT INTO td_num_casa (id_casa) VALUES (633);
+INSERT INTO td_num_casa (id_casa) VALUES (634);
+INSERT INTO td_num_casa (id_casa) VALUES (635);
+INSERT INTO td_num_casa (id_casa) VALUES (636);
+INSERT INTO td_num_casa (id_casa) VALUES (637);
+INSERT INTO td_num_casa (id_casa) VALUES (638);
+INSERT INTO td_num_casa (id_casa) VALUES (639);
+INSERT INTO td_num_casa (id_casa) VALUES (640);
+INSERT INTO td_num_casa (id_casa) VALUES (641);
+INSERT INTO td_num_casa (id_casa) VALUES (642);
+INSERT INTO td_num_casa (id_casa) VALUES (643);
+INSERT INTO td_num_casa (id_casa) VALUES (644);
+INSERT INTO td_num_casa (id_casa) VALUES (645);
+INSERT INTO td_num_casa (id_casa) VALUES (646);
+INSERT INTO td_num_casa (id_casa) VALUES (647);
+INSERT INTO td_num_casa (id_casa) VALUES (648);
+INSERT INTO td_num_casa (id_casa) VALUES (649);
+INSERT INTO td_num_casa (id_casa) VALUES (650);
+INSERT INTO td_num_casa (id_casa) VALUES (651);
+INSERT INTO td_num_casa (id_casa) VALUES (652);
+INSERT INTO td_num_casa (id_casa) VALUES (653);
+INSERT INTO td_num_casa (id_casa) VALUES (654);
+INSERT INTO td_num_casa (id_casa) VALUES (655);
+INSERT INTO td_num_casa (id_casa) VALUES (656);
+INSERT INTO td_num_casa (id_casa) VALUES (657);
+INSERT INTO td_num_casa (id_casa) VALUES (658);
+INSERT INTO td_num_casa (id_casa) VALUES (659);
+INSERT INTO td_num_casa (id_casa) VALUES (660);
+INSERT INTO td_num_casa (id_casa) VALUES (661);
+INSERT INTO td_num_casa (id_casa) VALUES (662);
+INSERT INTO td_num_casa (id_casa) VALUES (663);
+INSERT INTO td_num_casa (id_casa) VALUES (664);
+INSERT INTO td_num_casa (id_casa) VALUES (665);
+INSERT INTO td_num_casa (id_casa) VALUES (666);
+INSERT INTO td_num_casa (id_casa) VALUES (667);
+INSERT INTO td_num_casa (id_casa) VALUES (668);
+INSERT INTO td_num_casa (id_casa) VALUES (669);
+INSERT INTO td_num_casa (id_casa) VALUES (670);
+INSERT INTO td_num_casa (id_casa) VALUES (671);
+INSERT INTO td_num_casa (id_casa) VALUES (672);
+INSERT INTO td_num_casa (id_casa) VALUES (673);
+INSERT INTO td_num_casa (id_casa) VALUES (674);
+INSERT INTO td_num_casa (id_casa) VALUES (675);
+INSERT INTO td_num_casa (id_casa) VALUES (676);
+INSERT INTO td_num_casa (id_casa) VALUES (677);
+INSERT INTO td_num_casa (id_casa) VALUES (678);
+INSERT INTO td_num_casa (id_casa) VALUES (679);
+INSERT INTO td_num_casa (id_casa) VALUES (680);
+INSERT INTO td_num_casa (id_casa) VALUES (681);
+INSERT INTO td_num_casa (id_casa) VALUES (682);
+INSERT INTO td_num_casa (id_casa) VALUES (683);
+INSERT INTO td_num_casa (id_casa) VALUES (684);
+INSERT INTO td_num_casa (id_casa) VALUES (685);
+INSERT INTO td_num_casa (id_casa) VALUES (686);
+INSERT INTO td_num_casa (id_casa) VALUES (687);
+INSERT INTO td_num_casa (id_casa) VALUES (688);
+INSERT INTO td_num_casa (id_casa) VALUES (689);
+INSERT INTO td_num_casa (id_casa) VALUES (690);
+INSERT INTO td_num_casa (id_casa) VALUES (691);
+INSERT INTO td_num_casa (id_casa) VALUES (692);
+INSERT INTO td_num_casa (id_casa) VALUES (693);
+INSERT INTO td_num_casa (id_casa) VALUES (694);
+INSERT INTO td_num_casa (id_casa) VALUES (695);
+INSERT INTO td_num_casa (id_casa) VALUES (696);
+INSERT INTO td_num_casa (id_casa) VALUES (697);
+INSERT INTO td_num_casa (id_casa) VALUES (698);
+INSERT INTO td_num_casa (id_casa) VALUES (699);
+INSERT INTO td_num_casa (id_casa) VALUES (700);
+INSERT INTO td_num_casa (id_casa) VALUES (701);
+INSERT INTO td_num_casa (id_casa) VALUES (702);
+INSERT INTO td_num_casa (id_casa) VALUES (703);
+INSERT INTO td_num_casa (id_casa) VALUES (704);
+INSERT INTO td_num_casa (id_casa) VALUES (705);
+INSERT INTO td_num_casa (id_casa) VALUES (706);
+INSERT INTO td_num_casa (id_casa) VALUES (707);
+INSERT INTO td_num_casa (id_casa) VALUES (708);
+INSERT INTO td_num_casa (id_casa) VALUES (709);
+INSERT INTO td_num_casa (id_casa) VALUES (710);
+INSERT INTO td_num_casa (id_casa) VALUES (711);
+INSERT INTO td_num_casa (id_casa) VALUES (712);
+INSERT INTO td_num_casa (id_casa) VALUES (713);
+INSERT INTO td_num_casa (id_casa) VALUES (714);
+INSERT INTO td_num_casa (id_casa) VALUES (715);
+INSERT INTO td_num_casa (id_casa) VALUES (716);
+INSERT INTO td_num_casa (id_casa) VALUES (717);
+INSERT INTO td_num_casa (id_casa) VALUES (718);
+INSERT INTO td_num_casa (id_casa) VALUES (719);
+INSERT INTO td_num_casa (id_casa) VALUES (720);
+INSERT INTO td_num_casa (id_casa) VALUES (721);
+INSERT INTO td_num_casa (id_casa) VALUES (722);
+INSERT INTO td_num_casa (id_casa) VALUES (723);
+INSERT INTO td_num_casa (id_casa) VALUES (724);
+INSERT INTO td_num_casa (id_casa) VALUES (725);
+INSERT INTO td_num_casa (id_casa) VALUES (726);
+INSERT INTO td_num_casa (id_casa) VALUES (727);
+INSERT INTO td_num_casa (id_casa) VALUES (728);
+INSERT INTO td_num_casa (id_casa) VALUES (729);
+INSERT INTO td_num_casa (id_casa) VALUES (730);
+INSERT INTO td_num_casa (id_casa) VALUES (731);
+INSERT INTO td_num_casa (id_casa) VALUES (732);
+INSERT INTO td_num_casa (id_casa) VALUES (733);
+INSERT INTO td_num_casa (id_casa) VALUES (734);
+INSERT INTO td_num_casa (id_casa) VALUES (735);
+INSERT INTO td_num_casa (id_casa) VALUES (736);
+INSERT INTO td_num_casa (id_casa) VALUES (737);
+INSERT INTO td_num_casa (id_casa) VALUES (738);
+INSERT INTO td_num_casa (id_casa) VALUES (739);
+INSERT INTO td_num_casa (id_casa) VALUES (740);
+INSERT INTO td_num_casa (id_casa) VALUES (741);
+INSERT INTO td_num_casa (id_casa) VALUES (742);
+INSERT INTO td_num_casa (id_casa) VALUES (743);
+INSERT INTO td_num_casa (id_casa) VALUES (744);
+INSERT INTO td_num_casa (id_casa) VALUES (745);
+INSERT INTO td_num_casa (id_casa) VALUES (746);
+INSERT INTO td_num_casa (id_casa) VALUES (747);
+INSERT INTO td_num_casa (id_casa) VALUES (748);
+INSERT INTO td_num_casa (id_casa) VALUES (749);
+INSERT INTO td_num_casa (id_casa) VALUES (750);
+INSERT INTO td_num_casa (id_casa) VALUES (751);
+INSERT INTO td_num_casa (id_casa) VALUES (752);
+INSERT INTO td_num_casa (id_casa) VALUES (753);
+INSERT INTO td_num_casa (id_casa) VALUES (754);
+INSERT INTO td_num_casa (id_casa) VALUES (755);
+INSERT INTO td_num_casa (id_casa) VALUES (756);
+INSERT INTO td_num_casa (id_casa) VALUES (757);
+INSERT INTO td_num_casa (id_casa) VALUES (758);
+INSERT INTO td_num_casa (id_casa) VALUES (759);
+INSERT INTO td_num_casa (id_casa) VALUES (760);
+INSERT INTO td_num_casa (id_casa) VALUES (761);
+INSERT INTO td_num_casa (id_casa) VALUES (762);
+INSERT INTO td_num_casa (id_casa) VALUES (763);
+INSERT INTO td_num_casa (id_casa) VALUES (764);
+INSERT INTO td_num_casa (id_casa) VALUES (765);
+INSERT INTO td_num_casa (id_casa) VALUES (766);
+INSERT INTO td_num_casa (id_casa) VALUES (767);
+INSERT INTO td_num_casa (id_casa) VALUES (768);
+INSERT INTO td_num_casa (id_casa) VALUES (769);
+INSERT INTO td_num_casa (id_casa) VALUES (770);
+INSERT INTO td_num_casa (id_casa) VALUES (771);
+INSERT INTO td_num_casa (id_casa) VALUES (772);
+INSERT INTO td_num_casa (id_casa) VALUES (773);
+INSERT INTO td_num_casa (id_casa) VALUES (774);
+INSERT INTO td_num_casa (id_casa) VALUES (775);
+INSERT INTO td_num_casa (id_casa) VALUES (776);
+INSERT INTO td_num_casa (id_casa) VALUES (777);
+INSERT INTO td_num_casa (id_casa) VALUES (778);
+INSERT INTO td_num_casa (id_casa) VALUES (779);
+INSERT INTO td_num_casa (id_casa) VALUES (780);
+INSERT INTO td_num_casa (id_casa) VALUES (781);
+INSERT INTO td_num_casa (id_casa) VALUES (782);
+INSERT INTO td_num_casa (id_casa) VALUES (783);
+INSERT INTO td_num_casa (id_casa) VALUES (784);
+INSERT INTO td_num_casa (id_casa) VALUES (785);
+INSERT INTO td_num_casa (id_casa) VALUES (786);
+INSERT INTO td_num_casa (id_casa) VALUES (787);
+INSERT INTO td_num_casa (id_casa) VALUES (788);
+INSERT INTO td_num_casa (id_casa) VALUES (789);
+INSERT INTO td_num_casa (id_casa) VALUES (790);
+INSERT INTO td_num_casa (id_casa) VALUES (791);
+INSERT INTO td_num_casa (id_casa) VALUES (792);
+INSERT INTO td_num_casa (id_casa) VALUES (793);
+INSERT INTO td_num_casa (id_casa) VALUES (794);
+INSERT INTO td_num_casa (id_casa) VALUES (795);
+INSERT INTO td_num_casa (id_casa) VALUES (796);
+INSERT INTO td_num_casa (id_casa) VALUES (797);
+INSERT INTO td_num_casa (id_casa) VALUES (798);
+INSERT INTO td_num_casa (id_casa) VALUES (799);
+INSERT INTO td_num_casa (id_casa) VALUES (800);
+INSERT INTO td_num_casa (id_casa) VALUES (801);
+INSERT INTO td_num_casa (id_casa) VALUES (802);
+INSERT INTO td_num_casa (id_casa) VALUES (803);
+INSERT INTO td_num_casa (id_casa) VALUES (804);
+INSERT INTO td_num_casa (id_casa) VALUES (805);
+INSERT INTO td_num_casa (id_casa) VALUES (806);
+INSERT INTO td_num_casa (id_casa) VALUES (807);
+INSERT INTO td_num_casa (id_casa) VALUES (808);
+INSERT INTO td_num_casa (id_casa) VALUES (809);
+INSERT INTO td_num_casa (id_casa) VALUES (810);
+INSERT INTO td_num_casa (id_casa) VALUES (811);
+INSERT INTO td_num_casa (id_casa) VALUES (812);
+INSERT INTO td_num_casa (id_casa) VALUES (813);
+INSERT INTO td_num_casa (id_casa) VALUES (814);
+INSERT INTO td_num_casa (id_casa) VALUES (815);
+INSERT INTO td_num_casa (id_casa) VALUES (816);
+INSERT INTO td_num_casa (id_casa) VALUES (817);
+INSERT INTO td_num_casa (id_casa) VALUES (818);
+INSERT INTO td_num_casa (id_casa) VALUES (819);
+INSERT INTO td_num_casa (id_casa) VALUES (820);
+INSERT INTO td_num_casa (id_casa) VALUES (821);
+INSERT INTO td_num_casa (id_casa) VALUES (822);
+INSERT INTO td_num_casa (id_casa) VALUES (823);
+INSERT INTO td_num_casa (id_casa) VALUES (824);
+INSERT INTO td_num_casa (id_casa) VALUES (825);
+INSERT INTO td_num_casa (id_casa) VALUES (826);
+INSERT INTO td_num_casa (id_casa) VALUES (827);
+INSERT INTO td_num_casa (id_casa) VALUES (828);
+INSERT INTO td_num_casa (id_casa) VALUES (829);
+INSERT INTO td_num_casa (id_casa) VALUES (830);
+INSERT INTO td_num_casa (id_casa) VALUES (831);
+INSERT INTO td_num_casa (id_casa) VALUES (832);
+INSERT INTO td_num_casa (id_casa) VALUES (833);
+INSERT INTO td_num_casa (id_casa) VALUES (834);
+INSERT INTO td_num_casa (id_casa) VALUES (835);
+INSERT INTO td_num_casa (id_casa) VALUES (836);
+INSERT INTO td_num_casa (id_casa) VALUES (837);
+INSERT INTO td_num_casa (id_casa) VALUES (838);
+INSERT INTO td_num_casa (id_casa) VALUES (839);
+INSERT INTO td_num_casa (id_casa) VALUES (840);
+INSERT INTO td_num_casa (id_casa) VALUES (841);
+INSERT INTO td_num_casa (id_casa) VALUES (842);
+INSERT INTO td_num_casa (id_casa) VALUES (843);
+INSERT INTO td_num_casa (id_casa) VALUES (844);
+INSERT INTO td_num_casa (id_casa) VALUES (845);
+INSERT INTO td_num_casa (id_casa) VALUES (846);
+INSERT INTO td_num_casa (id_casa) VALUES (847);
+INSERT INTO td_num_casa (id_casa) VALUES (848);
+INSERT INTO td_num_casa (id_casa) VALUES (849);
+INSERT INTO td_num_casa (id_casa) VALUES (850);
+INSERT INTO td_num_casa (id_casa) VALUES (851);
+INSERT INTO td_num_casa (id_casa) VALUES (852);
+INSERT INTO td_num_casa (id_casa) VALUES (853);
+INSERT INTO td_num_casa (id_casa) VALUES (854);
+INSERT INTO td_num_casa (id_casa) VALUES (855);
+INSERT INTO td_num_casa (id_casa) VALUES (856);
+INSERT INTO td_num_casa (id_casa) VALUES (857);
+INSERT INTO td_num_casa (id_casa) VALUES (858);
+INSERT INTO td_num_casa (id_casa) VALUES (859);
+INSERT INTO td_num_casa (id_casa) VALUES (860);
+INSERT INTO td_num_casa (id_casa) VALUES (861);
+INSERT INTO td_num_casa (id_casa) VALUES (862);
+INSERT INTO td_num_casa (id_casa) VALUES (863);
+INSERT INTO td_num_casa (id_casa) VALUES (864);
+INSERT INTO td_num_casa (id_casa) VALUES (865);
+INSERT INTO td_num_casa (id_casa) VALUES (866);
+INSERT INTO td_num_casa (id_casa) VALUES (867);
+INSERT INTO td_num_casa (id_casa) VALUES (868);
+INSERT INTO td_num_casa (id_casa) VALUES (869);
+INSERT INTO td_num_casa (id_casa) VALUES (870);
+INSERT INTO td_num_casa (id_casa) VALUES (871);
+INSERT INTO td_num_casa (id_casa) VALUES (872);
+INSERT INTO td_num_casa (id_casa) VALUES (873);
+INSERT INTO td_num_casa (id_casa) VALUES (874);
+INSERT INTO td_num_casa (id_casa) VALUES (875);
+INSERT INTO td_num_casa (id_casa) VALUES (876);
+INSERT INTO td_num_casa (id_casa) VALUES (877);
+INSERT INTO td_num_casa (id_casa) VALUES (878);
+INSERT INTO td_num_casa (id_casa) VALUES (879);
+INSERT INTO td_num_casa (id_casa) VALUES (880);
+INSERT INTO td_num_casa (id_casa) VALUES (881);
+INSERT INTO td_num_casa (id_casa) VALUES (882);
+INSERT INTO td_num_casa (id_casa) VALUES (883);
+INSERT INTO td_num_casa (id_casa) VALUES (884);
+INSERT INTO td_num_casa (id_casa) VALUES (885);
+INSERT INTO td_num_casa (id_casa) VALUES (886);
+INSERT INTO td_num_casa (id_casa) VALUES (887);
+INSERT INTO td_num_casa (id_casa) VALUES (888);
+INSERT INTO td_num_casa (id_casa) VALUES (889);
+INSERT INTO td_num_casa (id_casa) VALUES (890);
+INSERT INTO td_num_casa (id_casa) VALUES (891);
+INSERT INTO td_num_casa (id_casa) VALUES (892);
+INSERT INTO td_num_casa (id_casa) VALUES (893);
+INSERT INTO td_num_casa (id_casa) VALUES (894);
+INSERT INTO td_num_casa (id_casa) VALUES (895);
+INSERT INTO td_num_casa (id_casa) VALUES (896);
+INSERT INTO td_num_casa (id_casa) VALUES (897);
+INSERT INTO td_num_casa (id_casa) VALUES (898);
+INSERT INTO td_num_casa (id_casa) VALUES (899);
+INSERT INTO td_num_casa (id_casa) VALUES (900);
+INSERT INTO td_num_casa (id_casa) VALUES (901);
+INSERT INTO td_num_casa (id_casa) VALUES (902);
+INSERT INTO td_num_casa (id_casa) VALUES (903);
+INSERT INTO td_num_casa (id_casa) VALUES (904);
+INSERT INTO td_num_casa (id_casa) VALUES (905);
+INSERT INTO td_num_casa (id_casa) VALUES (906);
+INSERT INTO td_num_casa (id_casa) VALUES (907);
+INSERT INTO td_num_casa (id_casa) VALUES (908);
+INSERT INTO td_num_casa (id_casa) VALUES (909);
+INSERT INTO td_num_casa (id_casa) VALUES (910);
+INSERT INTO td_num_casa (id_casa) VALUES (911);
+INSERT INTO td_num_casa (id_casa) VALUES (912);
+INSERT INTO td_num_casa (id_casa) VALUES (913);
+INSERT INTO td_num_casa (id_casa) VALUES (914);
+INSERT INTO td_num_casa (id_casa) VALUES (915);
+INSERT INTO td_num_casa (id_casa) VALUES (916);
+INSERT INTO td_num_casa (id_casa) VALUES (917);
+INSERT INTO td_num_casa (id_casa) VALUES (918);
+INSERT INTO td_num_casa (id_casa) VALUES (919);
+INSERT INTO td_num_casa (id_casa) VALUES (920);
+INSERT INTO td_num_casa (id_casa) VALUES (921);
+INSERT INTO td_num_casa (id_casa) VALUES (922);
+INSERT INTO td_num_casa (id_casa) VALUES (923);
+INSERT INTO td_num_casa (id_casa) VALUES (924);
+INSERT INTO td_num_casa (id_casa) VALUES (925);
+INSERT INTO td_num_casa (id_casa) VALUES (926);
+INSERT INTO td_num_casa (id_casa) VALUES (927);
+INSERT INTO td_num_casa (id_casa) VALUES (928);
+INSERT INTO td_num_casa (id_casa) VALUES (929);
+INSERT INTO td_num_casa (id_casa) VALUES (930);
+INSERT INTO td_num_casa (id_casa) VALUES (931);
+INSERT INTO td_num_casa (id_casa) VALUES (932);
+INSERT INTO td_num_casa (id_casa) VALUES (933);
+INSERT INTO td_num_casa (id_casa) VALUES (934);
+INSERT INTO td_num_casa (id_casa) VALUES (935);
+INSERT INTO td_num_casa (id_casa) VALUES (936);
+INSERT INTO td_num_casa (id_casa) VALUES (937);
+INSERT INTO td_num_casa (id_casa) VALUES (938);
+INSERT INTO td_num_casa (id_casa) VALUES (939);
+INSERT INTO td_num_casa (id_casa) VALUES (940);
+INSERT INTO td_num_casa (id_casa) VALUES (941);
+INSERT INTO td_num_casa (id_casa) VALUES (942);
+INSERT INTO td_num_casa (id_casa) VALUES (943);
+INSERT INTO td_num_casa (id_casa) VALUES (944);
+INSERT INTO td_num_casa (id_casa) VALUES (945);
+INSERT INTO td_num_casa (id_casa) VALUES (946);
+INSERT INTO td_num_casa (id_casa) VALUES (947);
+INSERT INTO td_num_casa (id_casa) VALUES (948);
+INSERT INTO td_num_casa (id_casa) VALUES (949);
+INSERT INTO td_num_casa (id_casa) VALUES (950);
+INSERT INTO td_num_casa (id_casa) VALUES (951);
+INSERT INTO td_num_casa (id_casa) VALUES (952);
+INSERT INTO td_num_casa (id_casa) VALUES (953);
+INSERT INTO td_num_casa (id_casa) VALUES (954);
+INSERT INTO td_num_casa (id_casa) VALUES (955);
+INSERT INTO td_num_casa (id_casa) VALUES (956);
+INSERT INTO td_num_casa (id_casa) VALUES (957);
+INSERT INTO td_num_casa (id_casa) VALUES (958);
+INSERT INTO td_num_casa (id_casa) VALUES (959);
+INSERT INTO td_num_casa (id_casa) VALUES (960);
+INSERT INTO td_num_casa (id_casa) VALUES (961);
+INSERT INTO td_num_casa (id_casa) VALUES (962);
+INSERT INTO td_num_casa (id_casa) VALUES (963);
+INSERT INTO td_num_casa (id_casa) VALUES (964);
+INSERT INTO td_num_casa (id_casa) VALUES (965);
+INSERT INTO td_num_casa (id_casa) VALUES (966);
+INSERT INTO td_num_casa (id_casa) VALUES (967);
+INSERT INTO td_num_casa (id_casa) VALUES (968);
+INSERT INTO td_num_casa (id_casa) VALUES (969);
+INSERT INTO td_num_casa (id_casa) VALUES (970);
+INSERT INTO td_num_casa (id_casa) VALUES (971);
+INSERT INTO td_num_casa (id_casa) VALUES (972);
+INSERT INTO td_num_casa (id_casa) VALUES (973);
+INSERT INTO td_num_casa (id_casa) VALUES (974);
+INSERT INTO td_num_casa (id_casa) VALUES (975);
+INSERT INTO td_num_casa (id_casa) VALUES (976);
+INSERT INTO td_num_casa (id_casa) VALUES (977);
+INSERT INTO td_num_casa (id_casa) VALUES (978);
+INSERT INTO td_num_casa (id_casa) VALUES (979);
+INSERT INTO td_num_casa (id_casa) VALUES (980);
+INSERT INTO td_num_casa (id_casa) VALUES (981);
+INSERT INTO td_num_casa (id_casa) VALUES (982);
+INSERT INTO td_num_casa (id_casa) VALUES (983);
+INSERT INTO td_num_casa (id_casa) VALUES (984);
+INSERT INTO td_num_casa (id_casa) VALUES (985);
+INSERT INTO td_num_casa (id_casa) VALUES (986);
+INSERT INTO td_num_casa (id_casa) VALUES (987);
+INSERT INTO td_num_casa (id_casa) VALUES (988);
+INSERT INTO td_num_casa (id_casa) VALUES (989);
+INSERT INTO td_num_casa (id_casa) VALUES (990);
+INSERT INTO td_num_casa (id_casa) VALUES (991);
+INSERT INTO td_num_casa (id_casa) VALUES (992);
+INSERT INTO td_num_casa (id_casa) VALUES (993);
+INSERT INTO td_num_casa (id_casa) VALUES (994);
+INSERT INTO td_num_casa (id_casa) VALUES (995);
+INSERT INTO td_num_casa (id_casa) VALUES (996);
+INSERT INTO td_num_casa (id_casa) VALUES (997);
+INSERT INTO td_num_casa (id_casa) VALUES (998);
+
 --
 --
 --
 /**********************ta_pagamento***********************/
+INSERT INTO ta_pagamento () VALUES ()
 --
 --
 --
 /**********************tb_periodo_disponibilidade*********************/
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-01-01", "2018-01-31");
+INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade, cod_espaco)
+ VALUES ("2018-01-01", "2018-01-31", 1);
 
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-02-01", "2018-02-28");
+INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade, cod_espaco)
+ VALUES ("2018-02-01", "2018-02-28", 2);
 
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-03-01", "2018-03-31");
+INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade, cod_espaco)
+ VALUES ("2018-03-01", "2018-03-31", 3);
 
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-04-01", "2018-04-30");
+INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade, cod_espaco)
+ VALUES ("2018-04-01", "2018-04-30", 4);
 
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-05-01", "2018-05-31");
+INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade, cod_espaco)
+ VALUES ("2018-05-01", "2018-05-31", 5);
 
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-06-01", "2018-06-30");
+INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade, cod_espaco)
+ VALUES ("2018-06-01", "2018-06-30", 6);
 
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-07-01", "2018-07-31");
-
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-08-01", "2018-08-31");
-
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-09-01", "2018-09-30");
-
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-10-01", "2018-10-31");
-
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-11-01", "2018-11-30");
-
-INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade) VALUES ("2018-12-01", "2018-12-31");
+INSERT INTO tb_periodo_disponibilidade (dta_inicio_disponibilidade, dta_fim_disponibilidade, cod_espaco)
+ VALUES ("2018-07-01", "2018-07-31", 7);
 --
 --
 --
@@ -5334,238 +6412,378 @@ INSERT INTO td_rua (nme_rua) VALUES ("Praça Rabelo");
 INSERT INTO td_rua (nme_rua) VALUES ("Praça da Igreja");
 INSERT INTO td_rua (nme_rua) VALUES ("Praça do Buriti");
 INSERT INTO td_rua (nme_rua) VALUES ("Praça dos Tribunais Superiores");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 102");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 102 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 102 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 102 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 102 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 103");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 103 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 103 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 103 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 103 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 104");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 104 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 104 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 104 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 104 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 105");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 105 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 105 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 105 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 105 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 106");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 106 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 106 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 106 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 106 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 107");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 107 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 107 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 107 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 107 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 108");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 108 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 108 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 108 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 108 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 109");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 109 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 109 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 109 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 109 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 110");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 110 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 110 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 110 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 110 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 111");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 111 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 111 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 111 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 111 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 112");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 112 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 112 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 112 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 112 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 113");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 113 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 113 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 113 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 113 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 114");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 114 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 114 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 114 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 114 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 115");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 115 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 115 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 115 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 115 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco E");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco F");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco G");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco H");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 116 Bloco I");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 201");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 201 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 201 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 201 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 201 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 202");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 202 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 202 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 202 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 202 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 203");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 203 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 203 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 203 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 203 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 204");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 204 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 204 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 204 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 204 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 205");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 205 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 205 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 205 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 205 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 206");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 206 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 206 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 206 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 206 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 207");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 207 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 207 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 207 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 207 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 208");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 208 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 208 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 208 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 208 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 209");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 209 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 209 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 209 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 209 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 210");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 210 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 210 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 210 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 210 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 211");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 211 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 211 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 211 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 211 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 212");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 212 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 212 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 212 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 212 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 213");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 213 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 213 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 213 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 213 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 214");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 214 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 214 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 214 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 214 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 215");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 215 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 215 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 215 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 215 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 216");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 216 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 216 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 216 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 216 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 302");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 302 Bloco A");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 302 Bloco B");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 302 Bloco C");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 302 Bloco D");
-INSERT INTO td_rua (nme_rua) VALUES ("Quadra CLN 302 Bloco E");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 102");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 102 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 102 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 102 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 102 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 103");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 103 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 103 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 103 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 103 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 104");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 104 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 104 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 104 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 104 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 105");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 105 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 105 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 105 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 105 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 106");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 106 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 106 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 106 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 106 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 107");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 107 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 107 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 107 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 107 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 108");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 108 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 108 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 108 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 108 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 109");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 109 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 109 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 109 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 109 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 110");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 110 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 110 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 110 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 110 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 111");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 111 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 111 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 111 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 111 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 112");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 112 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 112 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 112 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 112 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 113");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 113 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 113 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 113 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 113 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 114");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 114 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 114 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 114 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 114 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 115");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 115 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 115 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 115 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 115 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco E");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco F");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco G");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco H");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 116 Bloco I");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 201");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 201 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 201 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 201 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 201 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 202");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 202 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 202 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 202 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 202 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 203");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 203 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 203 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 203 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 203 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 204");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 204 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 204 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 204 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 204 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 205");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 205 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 205 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 205 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 205 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 206");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 206 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 206 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 206 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 206 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 207");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 207 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 207 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 207 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 207 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 208");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 208 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 208 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 208 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 208 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 209");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 209 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 209 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 209 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 209 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 210");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 210 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 210 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 210 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 210 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 211");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 211 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 211 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 211 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 211 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 212");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 212 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 212 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 212 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 212 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 213");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 213 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 213 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 213 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 213 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 214");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 214 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 214 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 214 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 214 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 215");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 215 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 215 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 215 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 215 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 216");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 216 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 216 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 216 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 216 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 302");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 302 Bloco A");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 302 Bloco B");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 302 Bloco C");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 302 Bloco D");
+INSERT INTO td_rua (nme_rua) VALUES (2, "Quadra CLN 302 Bloco E");
 --
 --
 --
---
---
+/**********************tb_espaco***********************/
+INSERT INTO tb_espaco (area_espaco, cep_espaco, qtd_hospedes_espaco, end_espaco, cod_tipo_espaco, cod_cidade)
+	VALUES (240,'71520270', 1, 'Quadra SHIN QI 8 Conjunto 7', 1, 805);
+
+INSERT INTO tb_espaco (area_espaco, cep_espaco, qtd_hospedes_espaco, end_espaco, cod_tipo_espaco, cod_cidade)
+	VALUES (1600, '73015608', 4, 'Quadra Quadra 2 Conjunto E-8', 2, 805);
+
+INSERT INTO tb_espaco (area_espaco, cep_espaco, qtd_hospedes_espaco, end_espaco, cod_tipo_espaco, cod_cidade)
+	VALUES (27, '73368384', 2, 'Quadra 12 Conjunto D', 3, 805);
+
+INSERT INTO tb_espaco (area_espaco, cep_espaco, qtd_hospedes_espaco, end_espaco, cod_tipo_espaco, cod_cidade)
+	VALUES (25, '71070662', 2, 'Área Especial Área Especial 2 Módulo F', 4, 805);
+
+INSERT INTO tb_espaco (area_espaco, cep_espaco, qtd_hospedes_espaco, end_espaco, cod_tipo_espaco, cod_cidade)
+	VALUES (15, '70070-701', 3, 'Estádio Mané Garrincha', 5, 805);
+
+INSERT INTO tb_espaco (area_espaco, cep_espaco, qtd_hospedes_espaco, end_espaco, cod_tipo_espaco, cod_cidade)
+	VALUES (32, '71070662', 2, 'Área Especial Área Especial 2 Módulo F', 6, 805);
+
+INSERT INTO tb_espaco (area_espaco, cep_espaco, qtd_hospedes_espaco, end_espaco, cod_tipo_espaco, cod_cidade)
+	VALUES (15, '71540070', 6, 'Quadra SMLN ML Trecho 7', 7, 805);
 --
 --
 --
 /**********************tb_sub_espaco***********************/
+INSERT INTO tb_sub_espaco (dsc_subespaco, cod_tipo_subespaco, cod_espaco)
+ VALUES ('Banheiro individual equipado com chuveiro e aquecedor', 1, 1);
+
+INSERT INTO tb_sub_espaco (dsc_subespaco, cod_tipo_subespaco, cod_espaco) 
+ VALUES ('Garagem Interna com espaço para até dois carros', 2, 2);
+
+INSERT INTO tb_sub_espaco (dsc_subespaco, cod_tipo_subespaco, cod_espaco)
+ VALUES ('Academia Interna exclusiva para hóspedes', 3, 3);
+
+INSERT INTO tb_sub_espaco (dsc_subespaco, cod_tipo_subespaco, cod_espaco)
+ VALUES ('Restaurante interno servindo café da manhã, almoço, chá',
+ 		 'da tarde e jantar. Exclusivo para todos hóspedes', 4, 4);
+
+INSERT INTO tb_sub_espaco (dsc_subespaco, cod_tipo_subespaco, cod_espaco)
+ VALUES ('Bar interno na sala do apartamento', 5, 5);
+
+INSERT INTO tb_sub_espaco (dsc_subespaco, cod_tipo_subespaco, cod_espaco)
+ VALUES ('Cyber Café para que os hóspedes ou convidados queiram interagir na Internet.', 6, 6);
+
+INSERT INTO tb_sub_espaco (dsc_subespaco, cod_tipo_subespaco, cod_espaco)
+ VALUES ('Quarto extra caso o hóspede deseje trazer mais uma pessoa.', 7, 7);
 --
 --
 --
-/**********************tb_tipo_espaco***********************/
+/**********************td_tipo_espaco***********************/
+INSERT INTO td_tipo_espaco (nme_tipo_imovel)
+ VALUES ('Quarto de Hóspedes');
+
+INSERT INTO td_tipo_espaco (nme_tipo_imovel)
+ VALUES ('Casa');
+
+INSERT INTO td_tipo_espaco (nme_tipo_imovel)
+ VALUES ('Quitinete');
+
+INSERT INTO td_tipo_espaco (nme_tipo_imovel)
+ VALUES ('Quarto de Hotel');
+
+INSERT INTO td_tipo_espaco (nme_tipo_imovel)
+ VALUES ('Espaço para locação');
+
+INSERT INTO td_tipo_espaco (nme_tipo_imovel)
+ VALUES ('Apartamento');
+
+INSERT INTO td_tipo_espaco (nme_tipo_imovel)
+ VALUES ('Mansão');
 --
 --
 --
-/**********************tb_tipo_sub_espaco***********************/
+/**********************td_tipo_subespaco***********************/
+INSERT INTO td_tipo_subespaco (nme_tipo_subespaco, cod_sub_espaco)
+ VALUES ('Banheiro', 1);
+
+INSERT INTO td_tipo_subespaco (nme_tipo_subespaco)
+ VALUES ('Garagem', 2);
+
+INSERT INTO td_tipo_subespaco (nme_tipo_subespaco)
+ VALUES ('Academia Interna', 3);
+
+INSERT INTO td_tipo_subespaco (nme_tipo_subespaco)
+ VALUES ('Restaurante', 4);
+
+INSERT INTO td_tipo_subespaco (nme_tipo_subespaco)
+ VALUES ('Bar', 5);
+
+INSERT INTO td_tipo_subespaco (nme_tipo_subespaco)
+ VALUES ('Cyber Café', 6);
+
+INSERT INTO td_tipo_subespaco (nme_tipo_subespaco)
+ VALUES ('Quarto Extra', 7);
 --
 --
 --
 /**********************td_unidade_federativa***********************/
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Acre', 'AC'); -- 1
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Alagoas', 'AL'); -- 2
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Amapa', 'AP'); -- 3
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Amazonas', 'AM'); -- 4
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Bahia', 'BA'); -- 5
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Ceará', 'CE'); -- 6
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Distrito Federal', 'DF'); -- 7
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Espirito Santo', 'ES'); -- 8
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Goiás', 'GO'); -- 9
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Maranhão', 'MA'); -- 10
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Mato Grosso', 'MT'); -- 11
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Mato Grosso do Sul', 'MS'); -- 12
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Minas Gerais', 'MG'); -- 13
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Pará', 'PA'); -- 14
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Paraíba', 'PB'); -- 15
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Paraná', 'PR'); -- 16
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Pernambuco', 'PE'); -- 17
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Piauí', 'PI'); -- 18
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Rio de Janeiro', 'RJ'); -- 19
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Rio Grande do Norte', 'RN'); -- 20
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Rio Grande do Sul', 'RS'); -- 21
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Rondônia', 'RO'); -- 22
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Roraima', 'RR'); -- 23
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Santa Catarina', 'SC'); -- 24
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('São Paulo', 'SP'); -- 25
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Sergipe', 'SE'); -- 26
-INSERT INTO td_unidade_federativa (nme_estado, sgl_estado) VALUES ('Tocantins', 'TO'); -- 27
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Acre', 'AC'); -- 1
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Alagoas', 'AL'); -- 2
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Amapa', 'AP'); -- 3
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Amazonas', 'AM'); -- 4
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Bahia', 'BA'); -- 5
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Ceará', 'CE'); -- 6
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Distrito Federal', 'DF'); -- 7
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Espirito Santo', 'ES'); -- 8
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Goiás', 'GO'); -- 9
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Maranhão', 'MA'); -- 10
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Mato Grosso', 'MT'); -- 11
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Mato Grosso do Sul', 'MS'); -- 12
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Minas Gerais', 'MG'); -- 13
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Pará', 'PA'); -- 14
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Paraíba', 'PB'); -- 15
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Paraná', 'PR'); -- 16
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Pernambuco', 'PE'); -- 17
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Piauí', 'PI'); -- 18
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Rio de Janeiro', 'RJ'); -- 19
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Rio Grande do Norte', 'RN'); -- 20
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Rio Grande do Sul', 'RS'); -- 21
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Rondônia', 'RO'); -- 22
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Roraima', 'RR'); -- 23
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Santa Catarina', 'SC'); -- 24
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('São Paulo', 'SP'); -- 25
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Sergipe', 'SE'); -- 26
+
+INSERT INTO td_unidade_federativa (nme_estado, sgl_estado)
+ VALUES ('Tocantins', 'TO'); -- 27
 --
 --
 --
 /**********************tb_usuario***********************/
-INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario)
-  VALUES ('Roger123', 'Roger@gmail.com', '12345', 'Roger Vasconcelos da Costa', '1980-08-07', '061985471234', '05142114587', '2845975');
+INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario) -- 2
+  VALUES ('Roger123', 'Roger@gmail.com', '12345',
+  		  'Roger Vasconcelos da Costa', '1980-08-07',
+  		   '061985471234', '05142114587', '2845975');
 
-INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario)
-  VALUES ('Joao321', 'Joao_mateus@gmail.com', '54321', 'João Mateus do Val', '1994-05-07', '061982315678', '04152134987', '8845657');
+INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario) -- 3
+  VALUES ('Joao321', 'Joao_mateus@gmail.com', '54321',
+          'João Mateus do Val', '1994-05-07', '061982315678',
+          '04152134987', '8845657');
 
-INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario)
-  VALUES ('Ricardo543608', 'Ricardo_Malandro@hotmail.com', '6guM9SDSjn', 'Ricardo Alexandre Martins', '1974-03-25', '985742398', '2834751');
+INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario) -- 4
+  VALUES ('Ricardo543608', 'Ricardo_Malandro@hotmail.com', '6guM9SDSjn', 'Ricardo Alexandre Martins', '1974-03-25', '985742398', '87269711437', '2834751');
 
-INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario)
+INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario) -- 5
   VALUES ('JoanaDark1997', 'JoanaDark97@gmail.com', '85SDCR7XA4', 'Joana Sousa Schneider', '1998-06-25', '061986570049', '09175246487', '2945876');
 
-INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario)
-  VALUES ('h4x4life1337', 'h4x4life@gmail.com', 'S4raS82epQ', 'Victor Herzog Aquino Rego', '1993-11-13', '85152819880', '432200228');
+INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario) -- 6
+  VALUES ('h4x4life1337', 'h4x4life@gmail.com', 'S4raS82epQ', 'Victor Aquino Rego', '1993-11-13', '85152819880', '73457397244', '4322002');
 
-INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario)
-  VALUES ('Dalborga', "Dalborga_Cadeia@hotmail.com", "Bandido_bom_e_bandido_morto44", "Luiz Carlos Alborghetti", '1945-02-12', '05184236357', '8945237');
+INSERT INTO tb_usuario (usr_usuario, eml_usuario, pwd_usuario, nme_usuario, dta_usuario, cel_usuario, cpf_usuario, rg_usuario) -- 7
+  VALUES ('Dalborga', "Dalborga_Cadeia@hotmail.com", "Bandido_bom_e_bandido_morto44", "Luiz Carlos Alborghetti", '1945-02-12', '05184236357', '72011618304', '8945237');
+
+INSERT INTO tb_avaliacao (vlr_nota_avaliacao, cmt_avaliacao, cod_usuario, cod reserva)
+ VALUES (2, 'In dignissim venenatis dolor eleifend.', 4, 4);
